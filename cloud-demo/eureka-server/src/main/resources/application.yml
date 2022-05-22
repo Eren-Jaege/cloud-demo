@@ -1,0 +1,17 @@
+server:
+  port: 10086 #服务器将要监听的端口
+
+spring:
+  application:
+    name: eurekaserver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+    fetch-registry: false #不要在本地缓存注册表信息
+    register-with-eureka: false #不要使用eureka服务进行注册
+  server:
+    wait-time-in-ms-when-sync-empty: 5 #服务器接收请求之前等待的时间
+  instance:
+    prefer-ip-address: true
+
